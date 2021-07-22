@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./pages/Home.js";
-import Food from "./pages/Food.js";
+import Food from "./pages/Food/Food.js";
 
 const Stack = createStackNavigator();
 
@@ -16,7 +16,6 @@ export default function App() {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Food" component={Food} />
       </Stack.Navigator>
-      {/* Rest of your app code */}
     </NavigationContainer>
   );
 }
