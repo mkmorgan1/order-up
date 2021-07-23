@@ -1,11 +1,11 @@
 import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
-import FoodHeader from "./FoodHeader.js";
+import NavigationBar from "../Navigation/NavigationBar.js";
 
 export default function Food({ navigation }) {
   return (
     <View>
-      <FoodHeader navigation={navigation} />
+      <NavigationBar navigation={navigation} />
       <Text>FOOD</Text>
     </View>
   );

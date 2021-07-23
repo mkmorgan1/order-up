@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faShoppingBasket, faHome } from "@fortawesome/free-solid-svg-icons";
 import colors from "../colors.js";
 
-export default function FoodHeader({ navigation }) {
+export default function NavigationBar({ navigation }) {
   const fontAwesomeSize = 30;
   return (
     <View style={styles.headerMenu}>
