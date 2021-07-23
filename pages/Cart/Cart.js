@@ -1,12 +1,11 @@
 import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
-import FoodHeader from "./FoodHeader.js";
+import colors from "./../colors.js";
 
-export default function Food({ navigation }) {
+export default function Cart({ navigation }) {
   return (
     <View>
-      <FoodHeader navigation={navigation} />
-      <Text>FOOD</Text>
+      <Text>Cart</Text>
     </View>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faShoppingBasket, faHome } from "@fortawesome/free-solid-svg-icons";
-import colors from "./../colors.js";
+import colors from "../colors.js";
 
 export default function FoodHeader({ navigation }) {
   const fontAwesomeSize = 30;
@@ -15,7 +15,10 @@ export default function FoodHeader({ navigation }) {
         <FontAwesomeIcon icon={faHome} size={fontAwesomeSize}></FontAwesomeIcon>
       </View>
       <View style={styles.headerOption}></View>
-      <View style={styles.headerOption}>
+      <View
+        style={styles.headerOption}
+        onTouchEnd={() => navigation.navigate("Cart")}
+      >
         <FontAwesomeIcon
           icon={faShoppingBasket}
           size={fontAwesomeSize}
