@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
     height: 180,
     backgroundColor: "skyblue",
     borderRadius: 10,
-    marginVertical: 12
-
-  }
-})
+    marginVertical: 12,
+  },
+});
