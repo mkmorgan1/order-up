@@ -9,7 +9,7 @@ export const foodItems = {
       price: 5.99,
     },
   ],
-  entre: [
+  entrees: [
     {
       name: "Burger",
       price: 10.99,

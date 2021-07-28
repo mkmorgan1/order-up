@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import {
@@ -19,6 +19,14 @@ const creatIcon = (icon) => (
 );
 
 export default function NavBar() {
+  const [cartData, setCartData] = useState([]);
+
+  const addToCart = (item) => {
+    const data = cartData;
+    data.push(item);
+    setCartData(data);
+  };
+
   return (
     <Tabs.Navigator
       screenOptions={({ route }) => ({
