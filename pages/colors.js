@@ -4,6 +4,6 @@ const colors = {
   purple: '#C997C6',
   lightTeal: '#B0EFEF',
   darkTeal: '#83D9DC',
-}
+};
 
-export default colors
+export default colors;

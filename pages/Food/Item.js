@@ -1,5 +1,5 @@
-import React from 'react'
-import { StyleSheet, Text, View, Button } from 'react-native'
+import React from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function Item({ item }) {
   return (
@@ -9,7 +9,7 @@ export default function Item({ item }) {
         <Text style={styles.innerText}>${item.price}</Text>
       </View>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -24,4 +24,4 @@ const styles = StyleSheet.create({
   innerText: {
     textAlign: 'center',
   },
-})
+});

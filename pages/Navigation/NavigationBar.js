@@ -1,11 +1,11 @@
-import React from 'react'
-import { StyleSheet, Text, View, Button } from 'react-native'
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import { faShoppingBasket, faHome } from '@fortawesome/free-solid-svg-icons'
-import colors from '../colors.js'
+import React from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faShoppingBasket, faHome } from '@fortawesome/free-solid-svg-icons';
+import colors from '../colors.js';
 
 export default function NavigationBar({ navigation }) {
-  const fontAwesomeSize = 30
+  const fontAwesomeSize = 30;
   return (
     <View style={styles.headerMenu}>
       <View
@@ -25,7 +25,7 @@ export default function NavigationBar({ navigation }) {
         ></FontAwesomeIcon>
       </View>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -45,4 +45,4 @@ const styles = StyleSheet.create({
     height: 75,
     width: 75,
   },
-})
+});

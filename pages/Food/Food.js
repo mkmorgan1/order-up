@@ -1,14 +1,14 @@
-import React from 'react'
-import { StyleSheet, Text, View, Button, ScrollView } from 'react-native'
-import Item from './Item'
-import { foodItems } from './dumbyData'
+import React from 'react';
+import { StyleSheet, Text, View, Button, ScrollView } from 'react-native';
+import Item from './Item';
+import { foodItems } from './dumbyData';
 
 export default function Food({ navigation }) {
   const getData = (type) => {
     return foodItems[type].map((item) => {
-      return <Item item={item} />
-    })
-  }
+      return <Item item={item} />;
+    });
+  };
   return (
     <View>
       <Text>FOOD</Text>
@@ -21,7 +21,7 @@ export default function Food({ navigation }) {
         </View>
       </ScrollView>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -34,4 +34,4 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-evenly',
   },
-})
+});

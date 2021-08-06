@@ -1,5 +1,5 @@
-import React from 'react'
-import { StyleSheet, Text, View, Button } from 'react-native'
+import React from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function Home({ navigation }) {
   return (
@@ -10,7 +10,7 @@ export default function Home({ navigation }) {
         <Button title="Order" onPress={() => navigation.navigate('Food')} />
       </View>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
     backgroundColor: '#f194ff',
     borderRadius: 8,
   },
-})
+});
