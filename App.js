@@ -6,14 +6,21 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import NavBar from './pages/Navigation/NavBar.js';
 
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import orderUpData from './redux/reducers/reducers.js';
+const store = createStore(orderUpData);
+
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Order Up" component={NavBar} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Order Up" component={NavBar} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 }

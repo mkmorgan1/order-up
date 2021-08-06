@@ -6,7 +6,7 @@ import { foodItems } from './dumbyData';
 export default function Food({ navigation }) {
   const getData = (type) => {
     return foodItems[type].map((item) => {
-      return <Item item={item} key={item.name}/>;
+      return <Item item={item} key={item.name} />;
     });
   };
   return (

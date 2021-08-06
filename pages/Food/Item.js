@@ -13,7 +13,7 @@ export default function Item({ item }) {
       console.log('removed');
       setClickedColor(colors.lightTeal);
     }
-  }
+  };
 
   const styles = StyleSheet.create({
     container: {
