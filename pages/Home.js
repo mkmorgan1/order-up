@@ -1,5 +1,5 @@
-import React from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import React from 'react'
+import { StyleSheet, Text, View, Button } from 'react-native'
 
 export default function Home({ navigation }) {
   return (
@@ -7,16 +7,16 @@ export default function Home({ navigation }) {
       <Text style={styles.welcome}>Welcome</Text>
       <Text style={styles.clickBelow}>Click below to place an order</Text>
       <View style={styles.orderButton}>
-        <Button title="Order" onPress={() => navigation.navigate("Food")} />
+        <Button title="Order" onPress={() => navigation.navigate('Food')} />
       </View>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   homePage: {
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     flex: 1,
   },
   welcome: {
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   orderButton: {
     margin: 30,
     padding: 10,
-    backgroundColor: "#f194ff",
+    backgroundColor: '#f194ff',
     borderRadius: 8,
   },
-});
+})

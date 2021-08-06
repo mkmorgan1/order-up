@@ -1,5 +1,5 @@
-import React from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import React from 'react'
+import { StyleSheet, Text, View, Button } from 'react-native'
 
 export default function Item({ item }) {
   return (
@@ -9,19 +9,19 @@ export default function Item({ item }) {
         <Text style={styles.innerText}>${item.price}</Text>
       </View>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     width: 180,
     height: 180,
-    backgroundColor: "skyblue",
+    backgroundColor: 'skyblue',
     borderRadius: 10,
     marginVertical: 12,
-    justifyContent: "center",
+    justifyContent: 'center',
   },
   innerText: {
-    textAlign: "center",
+    textAlign: 'center',
   },
-});
+})

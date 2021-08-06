@@ -1,31 +1,31 @@
 export const foodItems = {
   sides: [
     {
-      name: "Fries",
+      name: 'Fries',
       price: 4.99,
     },
     {
-      name: "Chips and Salsa",
+      name: 'Chips and Salsa',
       price: 5.99,
     },
   ],
   entrees: [
     {
-      name: "Burger",
+      name: 'Burger',
       price: 10.99,
     },
     {
-      name: "Hot Dog",
+      name: 'Hot Dog',
       price: 5.99,
     },
     {
-      name: "Salad",
+      name: 'Salad',
       price: 5.99,
       options: [
         {
-          dressings: ["Ranch", "Thousand Island", "Blue Cheese"],
+          dressings: ['Ranch', 'Thousand Island', 'Blue Cheese'],
         },
       ],
     },
   ],
-};
+}

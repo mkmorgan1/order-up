@@ -1,41 +1,41 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import React, { useState } from 'react'
+import { StyleSheet, Text, View, Button } from 'react-native'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import {
   faShoppingBasket,
   faHome,
   faUtensils,
-} from "@fortawesome/free-solid-svg-icons";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Home from "../Home.js";
-import Food from "../Food/Food.js";
-import Cart from "../Cart/Cart.js";
+} from '@fortawesome/free-solid-svg-icons'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import Home from '../Home.js'
+import Food from '../Food/Food.js'
+import Cart from '../Cart/Cart.js'
 
-const Tabs = createBottomTabNavigator();
-const fontAwesomeSize = 25;
+const Tabs = createBottomTabNavigator()
+const fontAwesomeSize = 25
 
 const creatIcon = (icon) => (
   <FontAwesomeIcon icon={icon} size={fontAwesomeSize}></FontAwesomeIcon>
-);
+)
 
 export default function NavBar() {
-  const [cartData, setCartData] = useState([]);
+  const [cartData, setCartData] = useState([])
 
   const addToCart = (item) => {
-    const data = cartData;
-    data.push(item);
-    setCartData(data);
-  };
+    const data = cartData
+    data.push(item)
+    setCartData(data)
+  }
 
   return (
     <Tabs.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: () => {
-          let tabIcon = "";
-          if (route.name === "Home") tabIcon = faHome;
-          else if (route.name === "Cart") tabIcon = faShoppingBasket;
-          else if (route.name === "Food") tabIcon = faUtensils;
-          return creatIcon(tabIcon);
+          let tabIcon = ''
+          if (route.name === 'Home') tabIcon = faHome
+          else if (route.name === 'Cart') tabIcon = faShoppingBasket
+          else if (route.name === 'Food') tabIcon = faUtensils
+          return creatIcon(tabIcon)
         },
       })}
     >
@@ -43,5 +43,5 @@ export default function NavBar() {
       <Tabs.Screen name="Food" component={Food} />
       <Tabs.Screen name="Cart" component={Cart} />
     </Tabs.Navigator>
-  );
+  )
 }
