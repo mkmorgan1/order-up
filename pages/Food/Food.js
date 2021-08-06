@@ -6,12 +6,11 @@ import { foodItems } from './dumbyData';
 export default function Food({ navigation }) {
   const getData = (type) => {
     return foodItems[type].map((item) => {
-      return <Item item={item} />;
+      return <Item item={item} key={item.name}/>;
     });
   };
   return (
     <View>
-      <Text>FOOD</Text>
       <ScrollView>
         <View style={styles.foodContainer}>
           <Text style={styles.itemHeader}>Sides</Text>
@@ -28,6 +27,7 @@ const styles = StyleSheet.create({
   itemHeader: {
     width: '100%',
     textAlign: 'center',
+    fontSize: 25,
   },
   foodContainer: {
     flexDirection: 'row',
