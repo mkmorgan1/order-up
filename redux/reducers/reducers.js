@@ -1,7 +1,12 @@
 import { combineReducers } from 'redux';
 
 const INITIAL_STATE = {
-  current: [],
+  current: [
+    {
+      name: 'test',
+      price: 5.99,
+    },
+  ],
   possible: [],
 };
 
