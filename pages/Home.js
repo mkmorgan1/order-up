@@ -1,4 +1,5 @@
 import React from 'react';
+import colors from './colors';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function Home({ navigation }) {
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
   orderButton: {
     margin: 30,
     padding: 10,
-    backgroundColor: '#f194ff',
+    backgroundColor: colors.lightTeal,
     borderRadius: 8,
   },
 });

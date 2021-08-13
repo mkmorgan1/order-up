@@ -14,7 +14,7 @@ const store = createStore(orderUpData);
 const Stack = createStackNavigator();
 
 export default function App() {
-  console.log('store', store)
+  console.log('store', store);
   return (
     <Provider store={store}>
       <NavigationContainer>
