@@ -1,27 +1,30 @@
 import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import * as React from 'react';
+import React, { createContext, useReducer } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import NavBar from './pages/Navigation/NavBar.js';
-
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import orderUpData from './redux/reducers/reducers.js';
-const store = createStore(orderUpData);
+import cartReducer from './context/reducers.js';
 
 const Stack = createStackNavigator();
+export const AppContext = createContext();
 
 export default function App() {
-  console.log('store', store);
+  const [state, dispatch] = useReducer(cartReducer, [
+    {
+      name: 'test',
+      price: 5.99,
+    },
+  ]);
+
   return (
-    <Provider store={store}>
+    <AppContext.Provider value={[state, dispatch]}>
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Order Up" component={NavBar} />
         </Stack.Navigator>
       </NavigationContainer>
-    </Provider>
+    </AppContext.Provider>
   );
 }

@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import colors from '../colors';
+import { AppContext } from '../../App.js';
 
 export default function Item({ item }) {
+  const [state, dispatch] = useContext(AppContext);
   const [clickedColor, setClickedColor] = useState(colors.lightTeal);
 
   const addToCart = () => {
+    dispatch({ type: 'ADD_TO_CART', payload: item });
+    changeColor();
+  };
+  const changeColor = () => {
     if (clickedColor === colors.lightTeal) {
       console.log(item);
       setClickedColor(colors.lightPink);
