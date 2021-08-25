@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
   orderButton: {
     margin: 30,
     padding: 10,
-    backgroundColor: colors.lightTeal,
     borderRadius: 8,
   },
 });
