@@ -39,18 +39,15 @@ export default function Item({ item }) {
     },
     imageContainer: {
       justifyContent: 'center',
-      alignItems: 'center'
-    }
+      alignItems: 'center',
+    },
   });
 
   return (
     <View style={styles.container} onTouchEnd={addToCart}>
       <View>
         <View style={styles.imageContainer}>
-          <Image
-            style={styles.image}
-            source={item.image}
-          />
+          <Image style={styles.image} source={item.image} />
         </View>
         <Text style={styles.innerText}>{item.name}</Text>
         <Text style={styles.innerText}>${item.price}</Text>

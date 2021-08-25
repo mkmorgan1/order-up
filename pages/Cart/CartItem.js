@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
+import { Divider } from 'react-native-paper';
 import colors from '../colors';
 
 export default function CartItem({ cart }) {
@@ -9,7 +10,8 @@ export default function CartItem({ cart }) {
         <View style={styles.cartItem} key={item.name}>
           <Text style={styles.item}>{`${item.name}`}</Text>
           <Text style={styles.item}>{`${item.price}`}</Text>
-          <Button style={styles.xButton} title={'X'} color={'black'}/>
+          <Button style={styles.xButton} title={'X'} color={'black'} />
+          <Divider />
         </View>
       );
     });
@@ -24,13 +26,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
   },
   item: {
-    textAlign: 'center',
+    justifyContent: 'center',
     width: '45%',
-    height: 30,
-    backgroundColor: colors.lightPink,
+    textAlign: 'center',
+    paddingTop: 12,
   },
   xButton: {
-    backgroundColor: colors.lightPink,
-    paddingHorizontal: 4
-  }
+    paddingHorizontal: 4,
+  },
 });
