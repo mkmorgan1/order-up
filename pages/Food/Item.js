@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Image } from 'react-native';
 import colors from '../colors';
 import { AppContext } from '../../App.js';
 
@@ -33,11 +33,25 @@ export default function Item({ item }) {
     innerText: {
       textAlign: 'center',
     },
+    image: {
+      width: 100,
+      height: 100,
+    },
+    imageContainer: {
+      justifyContent: 'center',
+      alignItems: 'center'
+    }
   });
 
   return (
     <View style={styles.container} onTouchEnd={addToCart}>
       <View>
+        <View style={styles.imageContainer}>
+          <Image
+            style={styles.image}
+            source={item.image}
+          />
+        </View>
         <Text style={styles.innerText}>{item.name}</Text>
         <Text style={styles.innerText}>${item.price}</Text>
       </View>
