@@ -9,6 +9,7 @@ export default function CartItem({ cart }) {
         <View style={styles.cartItem} key={item.name}>
           <Text style={styles.item}>{`${item.name}`}</Text>
           <Text style={styles.item}>{`${item.price}`}</Text>
+          <Button style={styles.xButton} title={'X'} color={'black'}/>
         </View>
       );
     });
@@ -24,8 +25,12 @@ const styles = StyleSheet.create({
   },
   item: {
     textAlign: 'center',
-    width: '49%',
+    width: '45%',
     height: 30,
     backgroundColor: colors.lightPink,
   },
+  xButton: {
+    backgroundColor: colors.lightPink,
+    paddingHorizontal: 4
+  }
 });
